@@ -40,7 +40,7 @@ AC_DEFUN([BITCOIN_FIND_BDB51],[
   BITCOIN_SUBDIR_TO_INCLUDE(BDB_CPPFLAGS,[${bdb51path}],db_cxx)
   bdbpath="${bdb51path}"
   
-  ST(BDB_CPPFLAGS)
+  AC_SUBST(BDB_CPPFLAGS)
   
   # TODO: Ideally this could find the library version and make sure it matches the headers being used
   for searchlib in db_cxx-5.1 db_cxx; do
