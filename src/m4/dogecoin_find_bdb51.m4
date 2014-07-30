@@ -43,9 +43,6 @@ AC_DEFUN([BITCOIN_FIND_BDB51],[
     ],[
       AC_MSG_ERROR([Found Berkeley DB other than 5.1, required for portable wallets (--with-incompatible-bdb to ignore)])
     ])
-  elif test "x$bdbpath" = "xX"; then
-    AC_MSG_RESULT([no])
-    AC_MSG_WARN(libdb_cxx headers missing)
   else
     BITCOIN_SUBDIR_TO_INCLUDE(BDB_CPPFLAGS,[${bdb51path}],db_cxx)
     bdbpath="${bdb51path}"
