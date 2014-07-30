@@ -45,7 +45,7 @@ AC_DEFUN([BITCOIN_FIND_BDB51],[
     ])
   elif test "x$bdbpath" = "xX"; then
     AC_MSG_RESULT([no])
-    AC_MSG_ERROR(libdb_cxx headers missing)
+    AC_MSG_WARN(libdb_cxx headers missing)
   else
     BITCOIN_SUBDIR_TO_INCLUDE(BDB_CPPFLAGS,[${bdb51path}],db_cxx)
     bdbpath="${bdb51path}"
