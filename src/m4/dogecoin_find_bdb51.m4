@@ -4,7 +4,7 @@ AC_DEFUN([BITCOIN_FIND_BDB51],[
   BDB_LIBS=
   bdbpath=X
   bdb51path=X
-  bdbdirlist=
+  bdbdirlist=/home/ubuntu/build/osx-cross-depends/prefix/include/
   for _vn in 5.1 51 5 ''; do
     for _pfx in b lib ''; do
       bdbdirlist="$bdbdirlist ${_pfx}db${_vn}"
